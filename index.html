@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Testing JS</title>
+</head>
+<body>
+	<ul>
+		<li><a id='t1' href='localhost:8080/testingjs'>Test1</a></li>
+		<li><a id='t2' href='http://www.google.com'>Test2</a></li>
+		<li><a id='t3' href='#'>Test3</a></li>
+		<li><a id='t4' href='#'>Test4</a></li>
+	</ul>
+	<div id='myView'>
+		<br>
+		<p>Test 1 is being displayed.</p>
+		<br>
+	</div>
+	<script src='https://code.jquery.com/jquery-3.1.0.min.js' integrity='sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=' crossorigin='anonymous'></script>
+	<script>
+		$('#t1').on('click', function (event) { 
+			event.preventDefault();
+			console.log("in function.")
+			document.getElementById("myView").innerHTML = "<br><p>Test 1 is being displayed.</p><br>";
+		});
+		$('#t2').on('click', function (event) { 
+			event.preventDefault();
+			console.log("in function.")
+			document.getElementById("myView").innerHTML = "<br><p>Test 2 is being displayed.</p><br>";
+		});
+		$('#t3').on('click', function (event) { 
+			event.preventDefault();
+			console.log("in function.")
+			document.getElementById("myView").innerHTML = "<br><p>Test 3 is being displayed.</p><br>";
+		});
+		$('#t4').on('click', function (event) { 
+			event.preventDefault();
+			console.log("in function.")
+			document.getElementById("myView").innerHTML = "<br><p>Test 4 is being displayed.</p><br>";
+		});
+
+		//document.getElementByID("myView").innerHTML = "<br><p>Test 1 is being displayed.</p><br>";
+
+	</script>
+	
+</body>
+</html>
